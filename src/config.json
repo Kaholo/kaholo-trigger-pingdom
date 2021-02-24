@@ -1,0 +1,70 @@
+{
+  "name": "Pingdom-Trigger",
+  "type": "trigger",
+  "execProgram": "node",
+  "main": "app.js",
+  "imgUrl": "logo.png",
+  "version": "1.0.1",
+  "description": "Handles Pingdom webhooks",
+  "methods": [
+    {
+      "name": "webhookAlert",
+      "route": "post /webhook/pingdom/alert",
+      "viewName": "Pingdom Alert",
+      "params": [
+        {
+          "name": "namePat",
+          "viewName": "Check Name Pattern",
+          "type": "string"
+        },
+        {
+          "name": "checkType",
+          "viewName": "Check Type",
+          "type": "options",
+          "options": [
+            {
+              "id": "any",
+              "name": "Any"
+            },
+            {
+              "id": "HTTP",
+              "name": "HTTP"
+            },
+            {
+              "id": "HTTP_CUSTOM",
+              "name": "HTTP Custom"
+            },
+            {
+              "id": "PORT_TCP",
+              "name": "TCP"
+            },
+            {
+              "id": "PING",
+              "name": "Ping"
+            },
+            {
+              "id": "DNS",
+              "name": "DNS"
+            },
+            {
+              "id": "UDP",
+              "name": "UDP"
+            },
+            {
+              "id": "SMTP",
+              "name": "SMTP"
+            },
+            {
+              "id": "POP3",
+              "name": "POP3"
+            },
+            {
+              "id": "IMAP",
+              "name": "IMAP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
